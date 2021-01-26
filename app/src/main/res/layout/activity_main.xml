@@ -6,7 +6,8 @@
     tools:context=".MainActivity">
 
     <!-- Note: A RecyclerView can also be used -->
-<androidx.core.widget.NestedScrollView
+
+    <androidx.core.widget.NestedScrollView
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:paddingBottom="100dp"
@@ -44,6 +45,8 @@ android:clipToPadding="false">
 
 </androidx.core.widget.NestedScrollView>
 
+
+
 <com.google.android.material.bottomappbar.BottomAppBar
 android:id="@+id/bottomAppBar"
 android:layout_width="match_parent"
@@ -57,8 +60,17 @@ app:menu="@menu/bottom_app_bar"
 <com.google.android.material.floatingactionbutton.FloatingActionButton
 android:layout_width="wrap_content"
 android:layout_height="wrap_content"
+    android:id="@+id/fab"
 android:src="@drawable/ic_add_24v"
 app:layout_anchor="@id/bottomAppBar"
+
     />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
