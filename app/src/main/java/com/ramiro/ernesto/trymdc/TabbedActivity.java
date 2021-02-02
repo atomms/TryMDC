@@ -74,9 +74,11 @@ bottomNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavi
 
         switch (item.getItemId()) {
             case R.id.likes:
+                item.setChecked(true);
                 Toast.makeText(TabbedActivity.this, "Likes clicked.", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.add:
+                item.setChecked(true);
                 Toast.makeText(TabbedActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
                 break;
         }
