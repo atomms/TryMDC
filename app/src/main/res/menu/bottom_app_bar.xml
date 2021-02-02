@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/search"
-        android:title="Settings"
+        android:id="@+id/likes"
+        android:title="Likes"
         android:icon="@drawable/ic_favorite"
         android:contentDescription="none"
         app:showAsAction="ifRoom"
@@ -14,8 +14,8 @@
 
 <!--    android:icon="@drawable/ic_search_24dp"-->/
     <item
-        android:id="@+id/more"
-        android:title="About"
+        android:id="@+id/add"
+        android:title="Add"
         android:icon="@drawable/ic_add_24v"
         android:contentDescription="none"
         app:showAsAction="never"

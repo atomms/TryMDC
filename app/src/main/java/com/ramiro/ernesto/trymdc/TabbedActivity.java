@@ -29,8 +29,8 @@ public class TabbedActivity extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
-//// cast al xml
-//        BottomNavigationView bottomNavBar = findViewById(R.id.bottom_navigation);
+// cast al xml
+        BottomNavigationView bottomNavBar = findViewById(R.id.bottom_navigation);
 
 
 //        //click event en el  FAB
@@ -68,20 +68,21 @@ public class TabbedActivity extends AppCompatActivity {
 //            }
 //        });
 
-        BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull final MenuItem item) {switch (item.getItemId()) {
-                case R.id.more:
-                    Toast.makeText(TabbedActivity.this, "About clicked.", Toast.LENGTH_SHORT).show();
-                    break;
-                case R.id.search:
-                    Toast.makeText(TabbedActivity.this, "Settings clicked.", Toast.LENGTH_SHORT).show();
-                    break;
-            }                return false;
-            }
-        };
+bottomNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-
+        switch (item.getItemId()) {
+            case R.id.likes:
+                Toast.makeText(TabbedActivity.this, "Likes clicked.", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.add:
+                Toast.makeText(TabbedActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return false;
+    }
+});
 
     }
 }

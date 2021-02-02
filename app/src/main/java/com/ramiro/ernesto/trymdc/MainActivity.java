@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.more:
+                    case R.id.likes:
                         Toast.makeText(MainActivity.this, "More clicked.", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.search:
+                    case R.id.add:
                         Toast.makeText(MainActivity.this, "Search clicked.", Toast.LENGTH_SHORT).show();
                         break;
                 }
