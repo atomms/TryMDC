@@ -5,9 +5,13 @@
     <item
         android:id="@+id/search"
         android:title="Settings"
+        android:icon="@drawable/ic_favorite"
         android:contentDescription="none"
         app:showAsAction="ifRoom"
         />
+
+
+
 <!--    android:icon="@drawable/ic_search_24dp"-->/
     <item
         android:id="@+id/more"
@@ -17,5 +21,7 @@
         app:showAsAction="never"
         >
     </item>
+
+
 
 </menu>
