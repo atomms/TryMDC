@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 //        titleTextView.setTypeface(App.getInstance().getActionBarTypeFace());
 //
 //        this.getSupportActionBar().setCustomView(v);
-
 
 
 // cast al xml
