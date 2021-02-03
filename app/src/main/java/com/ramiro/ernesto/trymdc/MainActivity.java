@@ -10,10 +10,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -37,44 +39,27 @@ public class MainActivity extends AppCompatActivity {
 //
 //        this.getSupportActionBar().setCustomView(v);
 
-        // cast al xml
-        BottomAppBar bottomAppBar = findViewById(R.id.bottomAppBar);
 
-        //click event en el  FAB
-        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+// cast al xml
+        BottomNavigationView bottomNavBar = findViewById(R.id.bottom_navigation);
+
+        bottomNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "FAB Clicked.", Toast.LENGTH_SHORT).show();
-            }
-        });
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        //click event en el Hamburguer menu
-        bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Menu clicked!", Toast.LENGTH_SHORT).show();
-//                sheetBehavior = BottomSheetBehavior.from(sheet);
-            }
-
-
-        });
-
-        //click event en el Bottom bar menu item
-        bottomAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.likes:
-                        Toast.makeText(MainActivity.this, "More clicked.", Toast.LENGTH_SHORT).show();
+                        item.setChecked(true);
+                        Toast.makeText(MainActivity.this, "Likes clicked.", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.add:
-                        Toast.makeText(MainActivity.this, "Search clicked.", Toast.LENGTH_SHORT).show();
+                        item.setChecked(true);
+                        Toast.makeText(MainActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return false;
             }
         });
-
 
     }
 
