@@ -10,13 +10,27 @@
         app:showAsAction="ifRoom"
         />
 
-
-
-<!--    android:icon="@drawable/ic_search_24dp"-->/
     <item
         android:id="@+id/add"
         android:title="Add"
         android:icon="@drawable/ic_add_24v"
+        android:contentDescription="none"
+        app:showAsAction="never"
+        >
+    </item>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Likes"
+        android:icon="@drawable/ic_profile"
+        android:contentDescription="none"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/marker"
+        android:title="Add"
+        android:icon="@drawable/ic_marker"
         android:contentDescription="none"
         app:showAsAction="never"
         >

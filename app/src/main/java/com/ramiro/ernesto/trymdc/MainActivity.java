@@ -56,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
                         item.setChecked(true);
                         Toast.makeText(MainActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
                         break;
+                    case R.id.profile:
+                        item.setChecked(true);
+                        Toast.makeText(MainActivity.this, "Profile clicked.", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.marker:
+                        item.setChecked(true);
+                        Toast.makeText(MainActivity.this, "Marker clicked.", Toast.LENGTH_SHORT).show();
+                        break;
                 }
                 return false;
             }
