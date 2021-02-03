@@ -13,12 +13,11 @@
             android:name=".TabbedActivity"
             android:label="@string/title_activity_main2"
             android:theme="@style/Theme.TryMDC.NoActionBar">
-
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="@string/title_activity_main2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
