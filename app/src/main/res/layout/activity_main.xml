@@ -15,44 +15,51 @@
 
         <!-- Scrollable content -->
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroup"
+<!--        <com.google.android.material.chip.ChipGroup-->
+<!--            android:id="@+id/chipGroup"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            >-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:checkable="true"-->
+<!--                app:chipIconVisible="true"-->
+<!--                app:closeIconVisible="true"-->
+<!--                android:id="@+id/chip6"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Games" />-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Yoga" />-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip4"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Ecology" />-->
+<!--        </com.google.android.material.chip.ChipGroup>-->
+
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
-
-            <com.google.android.material.chip.Chip
-                android:checkable="true"
-                app:chipIconVisible="true"
-                app:closeIconVisible="true"
-                android:id="@+id/chip6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Games" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Yoga" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ecology" />
-        </com.google.android.material.chip.ChipGroup>
+            android:layout_margin="16dp"
+            android:text="@string/largetext"
+            android:textSize="24sp"/>
 
     </androidx.core.widget.NestedScrollView>
-
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:menu="@menu/bottom_app_bar" />
+        app:menu="@menu/bottom_app_bar"
+        />
 
 
 
