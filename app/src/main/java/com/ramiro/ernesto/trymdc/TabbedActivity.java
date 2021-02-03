@@ -8,6 +8,8 @@ import com.google.android.material.tabs.TabLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,42 +34,6 @@ public class TabbedActivity extends AppCompatActivity {
 // cast al xml
         BottomNavigationView bottomNavBar = findViewById(R.id.bottom_navigation);
 
-
-//        //click event en el  FAB
-//        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(TabbedActivity.this, "FAB Clicked.", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-//        //click event en el Hamburguer menu
-//        bottomAppBar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(TabbedActivity.this, "Ham clicked!", Toast.LENGTH_SHORT).show();
-////                sheetBehavior = BottomSheetBehavior.from(sheet);
-//            }
-//
-//
-//        });
-
-//        //click event en el Bottom bar menu item
-//        bottomNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//
-//            public boolean onMenuItemClick(MenuItem item) {
-//                switch (item.getItemId()) {
-//                    case R.id.more:
-//                        Toast.makeText(TabbedActivity.this, "About clicked.", Toast.LENGTH_SHORT).show();
-//                        break;
-//                    case R.id.search:
-//                        Toast.makeText(TabbedActivity.this, "Settings clicked.", Toast.LENGTH_SHORT).show();
-//                        break;
-//                }
-//                return false;
-//            }
-//        });
-
 bottomNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -76,7 +42,7 @@ bottomNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavi
             case R.id.likes:
                 item.setChecked(true);
                 Toast.makeText(TabbedActivity.this, "Likes clicked.", Toast.LENGTH_SHORT).show();
-                break;
+            break;
             case R.id.add:
                 item.setChecked(true);
                 Toast.makeText(TabbedActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
