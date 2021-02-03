@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.trybap);
 
 //        this.getSupportActionBar().setDisplayShowCustomEnabled(true);
 //
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 //        this.getSupportActionBar().setCustomView(v);
 
         // cast al xml
-        BottomAppBar bottomAppBar = findViewById(R.id.bottomAppBar);
+        BottomAppBar bottomAppBar = findViewById(R.id.bottom_app_bar);
 
         //click event en el  FAB
         findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
