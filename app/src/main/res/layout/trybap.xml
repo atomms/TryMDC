@@ -41,9 +41,10 @@
             android:layout_gravity="bottom"
             app:fabAlignmentMode="center"
             app:menu="@menu/bottom_app_bar_menu"
-            app:navigationIcon="@drawable/ic_menu_on_surface_24dp" />
 
+            app:navigationIcon="@drawable/ic_menu_on_surface_24dp" />
         <!--        style="@style/Widget.MaterialComponents.BottomAppBar.PrimarySurface"-->
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
