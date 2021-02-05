@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.ramiro.ernesto.trymdc.ui.main.SectionsPagerAdapter;
 
+
 public class TabbedActivity extends AppCompatActivity {
 
     @Override
