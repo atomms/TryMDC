@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TryMDC">
         <activity
-            android:name=".TabbedActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.TryMDC.NoActionBar">
 <!--            <intent-filter>-->
@@ -19,8 +19,9 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main">
+            android:name=".TabbedActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.TryMDC.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
