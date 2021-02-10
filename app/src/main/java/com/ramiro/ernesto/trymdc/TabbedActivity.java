@@ -3,9 +3,12 @@ package com.ramiro.ernesto.trymdc;
 import android.os.Bundle;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -14,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -44,6 +48,16 @@ public class TabbedActivity extends AppCompatActivity {
 // cast al xml
         BottomNavigationView bottomNavBar = findViewById(R.id.bottom_navigation);
 
+        // crear badges
+        BottomNavigationMenuView bottomNavigationMenuView =
+                (BottomNavigationMenuView) bottomNavBar.getChildAt(0);
+        View v = bottomNavigationMenuView.getChildAt(2);
+        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
+
+        LayoutInflater.from(this)
+                .inflate(R.layout.layout_badge, itemView, true);
+
+
         bottomNavBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -52,21 +66,25 @@ public class TabbedActivity extends AppCompatActivity {
                     case R.id.likes:
                         item.setChecked(true);
                         Toast.makeText(TabbedActivity.this, "Likes clicked.", Toast.LENGTH_SHORT).show();
+                        removeBadge(bottomNavBar,item.getItemId());
                         viewPager.setCurrentItem(0);
                         break;
                     case R.id.add:
                         item.setChecked(true);
                         Toast.makeText(TabbedActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+                        removeBadge(bottomNavBar,item.getItemId());
                         viewPager.setCurrentItem(1);
                         break;
                     case R.id.profile:
                         item.setChecked(true);
                         Toast.makeText(TabbedActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+                        removeBadge(bottomNavBar,item.getItemId());
                         viewPager.setCurrentItem(2);
                         break;
                     case R.id.marker:
                         item.setChecked(true);
                         Toast.makeText(TabbedActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+                        removeBadge(bottomNavBar,item.getItemId());
                         viewPager.setCurrentItem(3);
                         break;
                 }
@@ -74,5 +92,11 @@ public class TabbedActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {
+        BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
+        if (itemView.getChildCount() == 3) {
+            itemView.removeViewAt(2);
+        }
     }
 }
