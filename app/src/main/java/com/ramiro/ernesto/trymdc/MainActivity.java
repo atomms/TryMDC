@@ -16,6 +16,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomappbar.BottomAppBar;
@@ -52,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
         // crear badges
         BottomNavigationMenuView bottomNavigationMenuView =
                 (BottomNavigationMenuView) bottomNavBar.getChildAt(0);
-        View v = bottomNavigationMenuView.getChildAt(0);
+        View v = bottomNavigationMenuView.getChildAt(2);
         BottomNavigationItemView itemView = (BottomNavigationItemView) v;
 
-        View badge = LayoutInflater.from(this)
+        LayoutInflater.from(this)
                 .inflate(R.layout.layout_badge, itemView, true);
 
         //eventos de los items
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                         item.setChecked(true);
                         Toast.makeText(MainActivity.this, "Add clicked.", Toast.LENGTH_SHORT).show();
                         removeBadge(bottomNavBar,item.getItemId());
+//                        ((NavigationHost) MainActivity).navigateTo(new ProductGridFragment(), false); // Navigate to the next Fragment
                         break;
                     case R.id.profile:
                         item.setChecked(true);
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 //        text.setText(value);
 //        itemView.addView(badge);
 //    }
-//
+
     public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {
         BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
         if (itemView.getChildCount() == 3) {
