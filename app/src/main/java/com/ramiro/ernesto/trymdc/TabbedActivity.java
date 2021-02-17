@@ -27,6 +27,7 @@ import com.ramiro.ernesto.trymdc.ui.main.SectionsPagerAdapter;
 
 public class TabbedActivity extends AppCompatActivity {
     private ItemViewModel viewModel;
+    private MenuItem prevMenuItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,9 @@ public class TabbedActivity extends AppCompatActivity {
             // Perform an action with the latest item data
 
         });
+
+
+
 
 // cast al xml
         BottomNavigationView bottomNavBar = findViewById(R.id.bottom_navigation);
@@ -92,7 +96,36 @@ public class TabbedActivity extends AppCompatActivity {
             }
         });
 
+
+//        here we listen to viewpager moves and set navigations items checked or not
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if (prevMenuItem != null)
+                    prevMenuItem.setChecked(false);
+
+                else
+                    bottomNavBar.getMenu().getItem(0).setChecked(false);
+
+                bottomNavBar.getMenu().getItem(position).setChecked(true);
+                prevMenuItem = bottomNavBar.getMenu().getItem(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
     }
+
+    //removong badges
     public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {
         BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
         if (itemView.getChildCount() == 3) {
