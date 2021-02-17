@@ -114,6 +114,7 @@ public class TabbedActivity extends AppCompatActivity {
                     bottomNavBar.getMenu().getItem(0).setChecked(false);
 
                 bottomNavBar.getMenu().getItem(position).setChecked(true);
+                removeBadge(bottomNavBar,bottomNavBar.getMenu().getItem(position).getItemId());
                 prevMenuItem = bottomNavBar.getMenu().getItem(position);
             }
 
