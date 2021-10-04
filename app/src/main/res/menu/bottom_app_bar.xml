@@ -7,7 +7,7 @@
         android:title="Likes"
         android:icon="@drawable/ic_favorite"
         android:contentDescription="none"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         />
 
     <item
@@ -15,13 +15,13 @@
         android:title="Add"
         android:icon="@drawable/ic_add_24v"
         android:contentDescription="none"
-        app:showAsAction="never"
+        app:showAsAction="always"
         >
     </item>
 
     <item
         android:id="@+id/profile"
-        android:title="Likes"
+        android:title="Profile"
         android:icon="@drawable/ic_profile"
         android:contentDescription="none"
         app:showAsAction="ifRoom"
@@ -29,10 +29,10 @@
 
     <item
         android:id="@+id/marker"
-        android:title="Add"
+        android:title="Marker"
         android:icon="@drawable/ic_marker"
         android:contentDescription="none"
-        app:showAsAction="never"
+        app:showAsAction="always"
         >
     </item>
 
