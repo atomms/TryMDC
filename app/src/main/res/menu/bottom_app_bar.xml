@@ -7,7 +7,7 @@
         android:title="Likes"
         android:icon="@drawable/ic_favorite"
         android:contentDescription="none"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         />
 
     <item

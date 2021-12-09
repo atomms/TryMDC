@@ -20,7 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.ramiro.ernesto.trymdc.ui.main.SectionsPagerAdapter;
 
 public class TabbedActivity extends AppCompatActivity {
-    private ItemViewModel viewModel;
+//    private ItemViewModel viewModel;
     private MenuItem prevMenuItem;
 
     @Override
@@ -35,12 +35,12 @@ public class TabbedActivity extends AppCompatActivity {
 //        TabLayout tabs = findViewById(R.id.tabs);
 //        tabs.setupWithViewPager(viewPager);
 
-        //startFragment
-        viewModel = new ViewModelProvider(this).get(ItemViewModel.class);
-        viewModel.getSelectedItem().observe(this, item -> {
-            // Perform an action with the latest item data
-
-        });
+//        //startFragment
+//        viewModel = new ViewModelProvider(this).get(ItemViewModel.class);
+//        viewModel.getSelectedItem().observe(this, item -> {
+//            // Perform an action with the latest item data
+//
+//        });
 
 
 

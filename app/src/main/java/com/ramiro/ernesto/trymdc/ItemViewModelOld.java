@@ -7,7 +7,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ItemViewModel extends ViewModel {
+public class ItemViewModelOld extends ViewModel {
     private final MutableLiveData<ClipData.Item> selectedItem = new MutableLiveData<ClipData.Item>();
     public void selectItem(ClipData.Item item) {
         selectedItem.setValue(item);
